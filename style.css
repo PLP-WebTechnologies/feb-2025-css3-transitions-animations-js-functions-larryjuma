@@ -1,0 +1,88 @@
+/* Default Light Theme */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+/* Animation for switching themes */
+body.theme-transition {
+  animation: themeSwitch 0.5s ease-out;
+}
+
+@keyframes themeSwitch {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Your existing styles */
+.container {
+  background-color: beige;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 800px;
+  margin: auto;
+}
+
+.box {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  animation: box 5s ease-in-out;
+}
+
+@keyframes box {
+  0% { transform: translateY(-50px); }
+  50% { transform: translateY(0px); }
+  100% { transform: translateY(-50px); }
+}
+
+.box img {
+  width: 200px;
+  height: 150px;
+  animation: img 4s ease-in infinite;
+}
+
+@keyframes img {
+  0% { opacity: 0.2; }
+  25% { opacity: 0.4; }
+  50% { opacity: 0.6; }
+  75% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+.title {
+  text-decoration: underline;
+  animation: title 5s infinite ease-in;
+}
+
+@keyframes title {
+  25% {
+    color: red;
+    transform: scale(1.5);
+  }
+  50% { color: blue; }
+  75% {
+    color: orange;
+    transform: scale(0.5);
+  }
+  100% { color: green; }
+}
